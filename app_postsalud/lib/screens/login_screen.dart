@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/widgets/input_decoration.dart'; // importM
+import 'package:app_postsalud/widgets/input_decoration.dart'; // importM
 // import 'package:email_validator/email_validator.dart';
 
 class LoginScreen extends StatelessWidget {
