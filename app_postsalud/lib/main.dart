@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/home_screen.dart';
+import 'package:flutter_application_1/screens/login_screen.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+void main() => runApp(const MyApp());
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      //Contiene toda la aplicacion
+      debugShowCheckedModeBanner: false,
+      title: 'Material App',
+      routes: {
+        //Asignacion de un nombre a LoginScreen para llamarlo
+        'login': (_) => const LoginScreen(),
+        'home': (_) => const HomeScreen(),
+      },
+      initialRoute: 'login', //Llama a 'login'
     );
   }
 }
